@@ -12,7 +12,7 @@ def reconstruct(input):
     repeater = 1
     samples = []
     while True:
-        print(repeater)
+        repeater += 1
         subsets = it.product(input, repeat=repeater)
 
         winner = ''
