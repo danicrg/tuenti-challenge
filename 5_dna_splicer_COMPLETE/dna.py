@@ -20,7 +20,7 @@ def test_chunk(input, chunk, indexes):
             if len(remainder) > 0:
                 new_indexes = test_chunk(input, remainder, indexes)
                 if len(new_indexes) > 0:
-                    return indexes
+                    return new_indexes
                 indexes.pop(-1)
 
     if chunk in input:
