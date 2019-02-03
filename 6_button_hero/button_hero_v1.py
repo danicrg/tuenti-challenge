@@ -51,7 +51,7 @@ for i in range(0, cases):
     starts = [all_notes[0]]
     starts += get_coinciding_notes(all_notes, all_notes[0])
 
-    starts = all_notes
+    # starts = all_notes
     best = 0
 
     frontier = PriorityQueue()

@@ -53,7 +53,7 @@ Case #52: 41
 Case #53: 36
 Case #54: 48
 Case #55: 77
-Case #56: 86
+Case #56: 80
 Case #57: 46
 Case #58: 82
 Case #59: 68
