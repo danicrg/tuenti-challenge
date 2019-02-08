@@ -1,6 +1,14 @@
 #!/usr/local/bin/python3
 
-import numpy as np
+
+def gcd(a, b):
+    while b > 0:
+        a, b = b, a % b
+    return a
+
+
+def lcm(a, b):
+    return int(a * b / gcd(a, b))
 
 
 def egcd(a, b):
@@ -20,7 +28,7 @@ def modinv(a, m):
 
 
 def intersect(door1, door2):
-    return (door1[0] + (door2[0] - door1[0]) * modinv(door1[1], door2[1]) * door1[1]) % np.lcm(door1[1], door2[1])
+    return (door1[0] + (door2[0] - door1[0]) * modinv(door1[1], door2[1]) * door1[1]) % lcm(door1[1], door2[1])
 
 
 f = open('testInput.txt', 'r')
@@ -36,6 +44,7 @@ for case in range(cases):
         first_open = int(p) - int(t)
         doors.append((first_open - index, int(p)))
 
+    doors = sorted(doors, key=lambda x: -x[1])
     door_counter = 2
 
     try:
@@ -43,7 +52,7 @@ for case in range(cases):
     except:
         out.write(f'Case #{case+1}: NEVER\n')
         continue
-    new_p = np.lcm(doors[0][1], doors[1][1])
+    new_p = lcm(doors[0][1], doors[1][1])
 
     while True:
 
@@ -58,7 +67,7 @@ for case in range(cases):
             solution = 'NEVER'
             break
 
-        new_p = np.lcm(new_door[1], doors[door_counter][1])
+        new_p = lcm(new_door[1], doors[door_counter][1])
         door_counter += 1
 
     out.write(f'Case #{case+1}: {solution}\n')
