@@ -16,7 +16,7 @@ def main():
 
 
 if __name__ == "__main__":
-    if len(sys.argv) < 3:
+    if len(sys.argv) != 3:
         print('Usage: waffles input.in output.out')
     else:
         main()

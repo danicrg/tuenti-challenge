@@ -1,4 +1,16 @@
-# Tuenti Challenge 2018
+# Tuenti Challenge
 
-Writeups for the tuenti 2018 challenges in python.
+Writeups for the tuenti challenges in python.
+
+## 2018
+
+| 1    | [./1_waffle_love_COMPLETE](Waffle Love) | COMPLETE |
+| ---- | --------------------------------------- | -------- |
+|      |                                         |          |
+|      |                                         |          |
+|      |                                         |          |
+|      |                                         |          |
+|      |                                         |          |
+|      |                                         |          |
+|      |                                         |          |
 
