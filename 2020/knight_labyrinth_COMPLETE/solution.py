@@ -1,9 +1,7 @@
 import numpy as np
 import collections
 import heapq
-import tqdm
 from netcat import Netcat
-import time
 nc = Netcat('52.49.91.111', 2003)
 
 
@@ -56,13 +54,13 @@ class KnightGrid:
 
         return np.matrix([list(row) for row in answer.split('\n')[:5]])
 
-    def expand_map(self, kp, map):
+    def expand_map(self, kp, mmap):
         try:
-            for i, row in enumerate(map):
+            for i, row in enumerate(mmap):
                 self.grid[kp[0] - 2 + i, kp[1] - 2:kp[1] + 3] = row
                 self.grid[kp[0], kp[1]] = '.'
         except:
-        	return 'Challenge Complete!'
+            return 'Challenge Complete!'
 
     def move_knight(self, kp, dx, dy):
         if dx == 0 and dy == 0:
@@ -247,6 +245,7 @@ def breadth_first_search_2(graph, start, goal):
     return came_from
 
 ################# SEVERAL ALGORITHMS WERE TESTED ##############
+
 
 if __name__ == "__main__":
 

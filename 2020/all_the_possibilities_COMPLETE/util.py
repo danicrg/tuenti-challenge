@@ -71,7 +71,6 @@ class PCustomWithCache:
         for i in [x for x in self.available if x in range(1, self.n - n + 1)]:
             calculate = n - i
             if calculate > 0:
-                arr = [0] * calculate
                 print('Calculate: ', calculate)
                 total += self(calculate)
 

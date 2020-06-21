@@ -1,5 +1,3 @@
-from math import floor
-
 f = open('submitInput.txt', 'r')
 output = open('submitOutput.txt', 'w')
 C = int(f.readline().strip())
