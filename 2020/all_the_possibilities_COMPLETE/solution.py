@@ -1,9 +1,4 @@
-import itertools as it
-from tqdm import tqdm
 from util import findNCombinations
-
-from time import time
-
 
 class PWithCache:
 

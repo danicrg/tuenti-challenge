@@ -17,7 +17,7 @@ function encrypt() {
     for ((i=0; i<${#msg}; i++)); do
         c=${msg:$i:1}
         asc_chr=$(echo -ne "$c" | od -An -tuC)
-        key_pos=$((${#key} - 1 - ${i}))
+        key_pos=$((${#key} - 1 - i))
         key_char=${key:$key_pos:1}
         crpt_chr=$(( $asc_chr ^ ${key_char} ))
         hx_crpt_chr=$(hex $crpt_chr)
